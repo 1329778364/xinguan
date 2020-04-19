@@ -6,7 +6,6 @@
 </template>
 
 <script>
-import $ from "jquery";
 export default {
   props: {
     userlist: Array,
@@ -30,8 +29,6 @@ export default {
   },
   mounted() {
     this.canva_box = this.$refs.usersHead1;
-    // this.canva_box_2 = this.$refs.usersHead2;
-    // this.canva_box_2 = this.$refs.usersHead3;
   },
   methods: {
     drawCanvasPic(location) {
