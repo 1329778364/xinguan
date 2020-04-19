@@ -1,0 +1,49 @@
+.showVideoCanvas {
+
+.show-head {
+  /*display: flex;*/
+  margin: auto;
+  background-color: #eeeeee;
+  justify-content: space-between;
+}
+
+#video {
+  width: 640px;
+  height: 360px;
+  background-color: black;
+}
+
+#canvas {
+  position: relative;
+  background-color: gray;
+  display: none;
+}
+
+#canvas-copy {
+  position: relative;
+  background-color: gray;
+}
+
+.action-head {
+  display: flex;
+  margin: 10px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.video-box {
+  height: 360px;
+  position: relative;
+  color: red;
+}
+
+.action-img {
+  width: 100px;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: 50%;
+  margin-top: -30px;
+  visibility: visible;
+}
+}
