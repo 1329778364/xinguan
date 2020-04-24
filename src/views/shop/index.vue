@@ -1,6 +1,6 @@
 <template>
   <div class="Shop">
-    <pre v-text="$attrs" />
+    商品列表
   </div>
 </template>
 

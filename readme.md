@@ -17,7 +17,17 @@
 - 以太坊实现区块链
   `看梳打饼v大V开不开`
 
-## Project setup
+注意事项
+
+- 项目中使用的 icon 是 ali 的，如果需要使用其他的 icon
+  可以自己在 main.ts 引入 相关样式文件
+
+* 解决 elment-UI 的 icon 无法显示，
+
+- 使用的 bootStrap 样式表，进行快速开发
+
+
+## 如何运行该项目
 
 ```
 npm install

@@ -5,7 +5,7 @@
         <div class="col-lg-6 col-md-8 m-auto pt-5">
           <div class="card mt-5">
             <div class="card-header">
-              <h3 class="text-center mb-0 text-second">{{ $cof.logo }}</h3>
+              <h3 class="text-center mb-0 text-second">{{ $conf.logo }}</h3>
             </div>
             <div class="card-body">
               <el-form ref="form" :rules="rules" :model="form">

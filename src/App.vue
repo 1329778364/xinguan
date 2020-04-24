@@ -2,8 +2,9 @@
   <div id="app">
     <h1>新冠肺炎信息系统</h1>
     <div id="nav">
-      <router-link to="/">实时监控系统</router-link> |
-      <router-link to="/about">病患信息系统</router-link>
+      <router-link to="/home">实时监控系统</router-link>|
+      <router-link to="/layout">病患信息系统</router-link> |
+      <router-link to="/login">登录页面</router-link>
     </div>
     <router-view />
   </div>

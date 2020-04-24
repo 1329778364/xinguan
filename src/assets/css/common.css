@@ -1,11 +1,15 @@
 .bg-gray {
-    background-color: #cccccc;
+  background-color: #cccccc;
 }
 
 .bg-sgray {
-    background-color: #f1f1ff;
+  background-color: #f1f1ff;
 }
 
 .bg-skyblue {
-    background-color: skyblue;
+  background-color: skyblue;
+}
+
+.border-radius-1 {
+  border-radius: 5px;
 }

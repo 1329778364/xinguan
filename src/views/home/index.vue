@@ -1,13 +1,17 @@
 <template>
-    $END$
+  <div class="home">
+    <Process></Process>
+  </div>
 </template>
 
 <script>
-  export default {
-    name: ""
+// @ is an alias to /src
+import Process from "@/components/Process/Process.vue";
+
+export default {
+  name: "Home",
+  components: {
+    Process
   }
+};
 </script>
-
-<style scoped>
-
-</style>
