@@ -16,6 +16,16 @@ export default {
             icon: "icon-huati",
             name: "商品列表",
             pathname: "shop_good_list"
+          },
+          {
+            icon: "icon-huati",
+            name: "新闻",
+            pathname: "news_times"
+          },
+          {
+            icon: "icon-huati",
+            name: "日记",
+            pathname: "dairy_fanfan"
           }
         ]
       },
@@ -27,6 +37,16 @@ export default {
             icon: "icon-tishi",
             name: "商品列表",
             pathname: "shop_good_list"
+          },
+          {
+            icon: "icon-tishi",
+            name: "商品详情",
+            pathname: "shop_good_detail"
+          },
+          {
+            icon: "icon-tishi",
+            name: "商品分类",
+            pathname: "shop_good_class"
           }
         ]
       },
@@ -36,11 +56,13 @@ export default {
         subMenu: [
           {
             icon: "icon-guanzhu",
-            name: "新闻1"
+            name: "时政",
+            pathname: "news_times"
           },
           {
             icon: "icon-jiju",
-            name: "新闻2"
+            name: "体育新闻",
+            pathname: "news_gym"
           }
         ]
       },
@@ -50,11 +72,13 @@ export default {
         subMenu: [
           {
             icon: "icon-paihangbang",
-            name: "日记1"
+            name: "芳芳日记",
+            pathname: "dairy_fanfan"
           },
           {
             icon: "icon-shangquan",
-            name: "日记2"
+            name: "圆圆日记",
+            pathname: "dairy_yuanyuan"
           }
         ]
       }

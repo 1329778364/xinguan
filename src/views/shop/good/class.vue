@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div>日记主页</div>
+    <div>商品分类</div>
   </div>
 </template>
 <script>

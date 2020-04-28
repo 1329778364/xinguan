@@ -24,10 +24,16 @@
         <el-card class="box-card">
           <div slot="header" class="clearfix">
             <span>卡片名称</span>
-            <el-button style="float: right;padding: 3px 0" type="text">操作按钮</el-button>
+            <el-button style="float: right;padding: 3px 0" type="text"
+              >操作按钮</el-button
+            >
           </div>
           <div class="row">
-            <div class="col-3" v-for="(itme, index) in [1,2,3,4]" :key="index">
+            <div
+              class="col-3"
+              v-for="(itme, index) in [1, 2, 3, 4]"
+              :key="index"
+            >
               <button class="btn btn-light w-100">
                 <h5>60</h5>
                 <small class="text-muted">数据</small>
@@ -39,12 +45,14 @@
         <el-card class="box-card mt-3">
           <div slot="header" class="clearfix">
             <span>卡片名称</span>
-            <el-button style="float: right;padding: 3px 0" type="text">操作按钮</el-button>
+            <el-button style="float: right;padding: 3px 0" type="text"
+              >操作按钮</el-button
+            >
           </div>
           <div class="row">
             <div
               class="col-2 w-100"
-              v-for="(itme, index) in [1,2,3,4,5,6]"
+              v-for="(itme, index) in [1, 2, 3, 4, 5, 6]"
               :key="index"
               style="padding:0"
             >
@@ -60,7 +68,9 @@
         <el-card class="box-card" style="height:358px">
           <div slot="header" class="clearfix">
             <span>卡片名称</span>
-            <el-button style="float: right;padding: 3px 0" type="text">操作按钮</el-button>
+            <el-button style="float: right;padding: 3px 0" type="text"
+              >操作按钮</el-button
+            >
           </div>
         </el-card>
       </el-col>

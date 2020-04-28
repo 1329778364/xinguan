@@ -2,7 +2,11 @@
   <div class="About">
     <el-container style="position: absolute; bottom: 0;left:0;right:0;top: 0; overflow: hidden;">
       <el-header class="d-flex align-items-center" style="background-color:#545c64;">
-        <span class="h5 text-light mb-0" style="margin-right: auto">{{ $conf.logo }}</span>
+        <span class="h5 text-light mb-0" style="margin-right: auto">
+          {{
+          $conf.logo
+          }}
+        </span>
         <el-menu
           :default-active="navbars.active.toString()"
           class="el-menu-demo"
@@ -19,11 +23,12 @@
           >{{ item.name }}</el-menu-item>
         </el-menu>
       </el-header>
+
       <el-container style="height: 100%; padding-bottom: 60px">
         <el-aside width="200px" class="test-5">
           <el-menu
             style="height: 100%"
-            :default-active="slideMenuActive"
+            :default-active="slideMenuActive.toString()"
             class="el-menu-vertical-demo"
             @select="slideSelect"
           >
@@ -86,27 +91,33 @@ export default {
 
   computed: {
     slideMenus() {
-      return this.navbars.list[this.navbars.active].subMenu || [];
+      let item = this.navbars.list[this.navbars.active];
+      return item ? item.subMenu : [];
     },
     slideMenuActive: {
       get() {
-        return this.navbars.list[this.navbars.active].subActive || "0";
+        let item = this.navbars.list[this.navbars.active];
+        return item ? item.subActive : "0";
       },
       set(val) {
-        this.navbars.list[this.navbars.active].subActive = val;
+        let item = this.navbars.list[this.navbars.active];
+        if (item) {
+          item.subActive = val;
+        }
       }
     }
   },
+
   watch: {
     $route(to, from) {
-      this.getRouterBran();
       localStorage.setItem(
         "navActive",
         JSON.stringify({
-          top: this.navbars.active,
-          left: this.slideMenuActive
+          top: this.navbars.active || "0",
+          left: this.slideMenuActive || "0"
         })
       );
+      this.getRouterBran();
     }
   },
   methods: {
@@ -138,21 +149,29 @@ export default {
       this.bran = arr;
       // console.log(this.bran);
     },
-    handleSelect(key, keyPath) {
-      // if (this.navbars.active === key) return;
+    handleSelect(key) {
       this.navbars.active = key;
-      this.$router.push({
-        name: this.slideMenus[this.slideMenuActive].pathname
-      });
       this.slideMenuActive = "0";
+      console.log(this.slideMenus[this.slideMenuActive].pathname);
+      if (this.slideMenus.lenth > 0) {
+        this.$router
+          .push({
+            name: this.slideMenus[this.slideMenuActive].pathname
+          })
+          .catch(err => {
+            console.log(err);
+          });
+      }
     },
-    slideSelect(key, keyPath) {
-      if (key === this.slideMenuActive) return;
-      this.$router.push({ name: this.slideMenus[key].pathname });
-      this.navbars.active = key;
-      this.slideMenuActive = "0";
-
-      console.log(this.slideMenuActive, this.navbars.active);
+    slideSelect(key) {
+      this.slideMenuActive = key;
+      this.$router.push({ name: this.slideMenus[key].pathname }).catch(err => {
+        err;
+      });
+      console.log(this.navbars.active, key);
+      if (this.navbars.active == 0) {
+        this.navbars.active = key;
+      }
     }
   }
 };

@@ -1,11 +1,17 @@
 <template>
-  <div class="Shop">
-    商品列表
+  <div class="container">
+    <div>shop首页</div>
   </div>
 </template>
-
 <script>
 export default {
-  props: {}
+  component: {},
+  props: {},
+  data() {
+    return {};
+  },
+  watch: {},
+  computed: {},
+  methods: {}
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div>日记主页</div>
+    <div>时政要闻</div>
   </div>
 </template>
 <script>

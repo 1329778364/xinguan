@@ -1,4 +1,4 @@
-import ar from "element-ui/src/locale/lang/ar";
+// import ar from "element-ui/src/locale/lang/ar";
 
 let routes = [
   {
@@ -14,11 +14,50 @@ let routes = [
         },
         component: "index/index"
       },
+
       {
         meta: {
           title: "商品列表"
         },
         component: "shop/good/list"
+      },
+      {
+        meta: {
+          title: "商品分类"
+        },
+        component: "shop/good/class"
+      },
+      {
+        meta: {
+          title: "商品详情"
+        },
+        component: "shop/good/detail"
+      },
+
+
+      {
+        meta: {
+          title: "时政要闻"
+        },
+        component: "news/times/index"
+      },
+      {
+        meta: {
+          title: "体育新闻"
+        },
+        component: "news/gym/index"
+      },
+      {
+        meta: {
+          title: "芳芳日记"
+        },
+        component: "dairy/fanfan/index"
+      },
+      {
+        meta: {
+          title: "圆圆日记"
+        },
+        component: "dairy/yuanyuan/index"
       }
     ]
   },
@@ -37,6 +76,7 @@ let routes = [
 function getRouters() {
   // 导入component
   creatRouters(routes);
+  console.log(routes);
   return routes;
 }
 
@@ -64,11 +104,8 @@ function getVal(str = "") {
   let index2 = str2.lastIndexOf("/");
   let val2 = str.substring(index2 + 1, str2.length);
   if (val === "index") {
-    // || val === val2
-    // console.log(val, val2);
     return str.substring(index, -1);
   }
-  // console.log(str);
   return str;
 }
 export default getRouters();

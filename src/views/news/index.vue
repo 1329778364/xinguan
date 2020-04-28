@@ -1,11 +1,28 @@
 <template>
   <div class="news">
-    <pre v-text="$attrs" />
+    <div>新闻主页</div>
   </div>
 </template>
 
 <script>
 export default {
-  props: {}
+  component:{
+    
+  },
+  props: {},
+  data() {
+    return {
+      
+    }
+  },
+  watch: {
+    
+  },
+  computed: {
+    
+  },
+  methods: {
+    
+  },
 };
 </script>
